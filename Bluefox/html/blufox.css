@@ -1,0 +1,24 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .header {
+    background-color: #ff0000;
+  }
+  
+  /* Exemplo de estilos para botões */
+  .button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }  
+  
+  /* Exemplo de estilo para tornar o site responsivo */
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores */
+  }
+  

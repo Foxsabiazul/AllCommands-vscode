@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(0, 191, 255);
+    background-image: url(depositphotos_27672887-stock-illustration-blank-sheet-of-old-notebook-transformed.jpeg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    color: rgba(15, 0, 148, 0.712)
+}
+.container .container:hover{
+ background-color: rgb(0, 255, 170);
+ color: blue;
+ transition: 0.5s;
+
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+}
+
+.to-do-list-input{
+    width: 100%;
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+}
+
+.to-do-list-input input{
+    width: 50%;
+    height: 70px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: none;
+    text-indent: 40px;
+    font-size: 18px;
+    outline: none;
+}
+
+.to-do-list-input button{
+    width: 100px;
+    height: 70px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.to-do-list-input button p{
+    border-radius: 100px;
+    width: 95px;
+    height: 60px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-list-input button:hover p{
+    background-color: green;
+    color: white;
+    border-radius: 100px;
+    width: 95px;
+    height: 60px;
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.383);
+}
+
+.to-do-list-items{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.to-do-list-items input{
+    width: 80%;
+    height: 70px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: none;
+    text-indent: 40px;
+    font-size: 18px;
+    outline: none;
+}
+
+.to-do-list-items .ck-button{
+    width: 70px;
+    height: 70px;
+    border: none;
+    font-size: 36px;
+    background-color: green;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.to-do-list-items .ck-button:hover{
+    opacity: 0.5;
+}
+
+.to-do-list-items .del-button{
+    width: 70px;
+    height: 70px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: none;
+    font-size: 36px;
+    background-color: red;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.to-do-list-items .del-button:hover{
+    opacity: 0.5;
+}
+
+.to-do-list{
+    width: 100%;
+}
+
+.to-do-list-items ul{
+    width: 60%;
+}
+
+.new-item{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.new-item .text{
+
+    width: 500px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.new-item .text input{
+    width: 100%;
+
+}
+
+.new-item .button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-item .button{
+    color: white;
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.modal-container .modal{
+    background-color: rgb(241, 241, 241);
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    z-index: 3;
+    position: fixed;
+}
+
+.modal-container .modal .title{
+    display: flex;
+    width: 100%;
+    background-color: rgb(211, 0, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    padding: 20px;
+}
+
+.modal-container .modal .message{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+
+}
+
+.modal-container .modal .button{
+    width: 100%;
+    padding: 20px;
+}
+
+.modal-container .modal button{
+        width: 100%;
+        height: 50px;
+        border-radius: 100px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.2s;
+}
+
+.modal-container .modal button:hover{
+    background-color: gray;
+    color: whitesmoke;
+    transition: 0.2s;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,0.5),;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+

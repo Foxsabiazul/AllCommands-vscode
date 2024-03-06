@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <div id="calc" class="calculator">
+            <input id="result-area" type="text">
+            <div class="buttons">
+                <div class="buttons-standard">
+                    <div id="ac" class="button-simbol" onclick="acClick()">
+                        <button>AC</button>
+                    </div>
+                    <div id="delete" class="button-simbol">
+                        <button>Del</button>
+                    </div>
+                    <div id="percent" class="button-simbol" onclick="percentClick()">
+                        <button>%</button>
+                    </div>
+                    <div id="division" class="button-simbol"  onclick="divisionClick()">
+                        <button>/</button>
+                    </div>
+                    <div id="one" class="button" onclick="numberOneClick()">
+                        <button>1</button>
+                    </div>
+                    <div id="two" class="button" onclick="numberTwoClick()">
+                        <button>2</button>
+                    </div>
+                    <div id="three" class="button" onclick="numberThreeClick()">
+                        <button>3</button>
+                    </div>
+                    <div id="mult" class="button-simbol"  onclick="multClick()">
+                        <button>x</button>
+                    </div>
+                    <div id="four" class="button" onclick="numberFourClick()">
+                        <button>4</button>
+                    </div>
+                    <div id="five" class="button" onclick="numberFiveClick()">
+                        <button>5</button>
+                    </div>
+                    <div id="six" class="button" onclick="numberSixClick()">
+                        <button>6</button>
+                    </div>
+                    <div id="minus" class="button-simbol" onclick="minusClick()">
+                        <button>-</button>
+                    </div>
+                    <div id="seven" class="button" onclick="numberSevenClick()">
+                        <button>7</button>
+                    </div>
+                    <div id="eight" class="button" onclick="numberEightClick()">
+                        <button>8</button>
+                    </div>
+                    <div id="nine" class="button" onclick="numberNineClick()">
+                        <button>9</button>
+                    </div>
+                    <div id="sum" class="button-simbol" onclick="sumClick()">
+                        <button>+</button>
+                    </div>
+                    <div id="sci" class="button-simbol" onclick="sciClick()">
+                        <button>Sci</button>
+                    </div>
+                    <div id="zero" class="button" onclick="numberZeroClick()">
+                        <button>0</button>
+                    </div>
+                    <div id="comma" class="button" onclick="commaClick()">
+                        <button>,</button>
+                    </div>
+                    <div id="result" class="button-simbol" onclick="resultClick()">
+                        <button>=</button>
+                    </div>
+                </div>
+                <div id="buttons-sci" class="buttons-sci">
+                    <div id="parenthesis-open" class="button" onclick="parenthesisOpenClick()">
+                        <button>(</button>
+                    </div>
+                    <div id="parenthesis-close" class="button" onclick="parenthesisCloseClick()">
+                        <button>)</button>
+                    </div>
+                    <div id="tan" class="button">
+                        <button>tan</button>
+                    </div>
+                    <div id="cos" class="button">
+                        <button>cos</button>
+                    </div>
+                    <div id="sin" class="button">
+                        <button>sin</button>
+                    </div>
+                    <div id="deg" class="button">
+                        <button>deg</button>
+                    </div>
+                    <div id="lg" class="button">
+                        <button>lg</button>
+                    </div>
+                    <div id="ln" class="button">
+                        <button>ln</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

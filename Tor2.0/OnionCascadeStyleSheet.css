@@ -1,0 +1,92 @@
+  @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
+*{
+    font-family:'Creepster', Arial, Helvetica, sans-serif; 
+    
+} 
+
+body{
+    color: rgb(236, 236, 185);
+    /* height: 100vh; */
+    background: url("tor-Name.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.search-container {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    height: 100%;
+}
+
+#search-input {
+    padding: 10px;
+    transition: 0.56s;
+    border-radius: 0cqb;
+    color: rgb(0, 0, 0);
+    flex: 1;
+}
+
+button {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    /* background-color: #00a300; */
+    border-radius:none;
+    cursor: pointer;
+    border-left: none;
+    border-top: none;
+    border-right:none;
+    border-bottom: none;
+    transition: 0.5s;
+   
+    
+}
+.Onion {
+
+    /* justify-content: flex-start; */
+    margin: 0px;
+    
+}
+
+.Onion img{
+    width: 150px;
+    height: 150px;
+    display: flex;
+}
+
+.search-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+
+.search-form .txt input{
+    width: 100%;
+}
+
+.search-form .txt{
+    width: 50%;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wifi{
+    width: 0;
+    max-width: 100;
+    
+}
+
+.lupa{
+    position: absolute;
+    width: 50px;   
+    bottom: 65%;
+    right: 6;
+}

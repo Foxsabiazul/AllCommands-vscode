@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Minha lista de tarefas</h1>
+        </div>
+        <div class="to-do-list-input">
+            <input id="newTask" type="text" placeholder="Adicionar tarefa">
+            <button onclick="addTask()"><p></p></button>
+        </div>
+        
+        <!-- Lista de tarefas -->
+        <div class="to-do-list-items">
+            <ul id="to-do-list">
+
+            </ul>
+        </div>
+        
+        <!-- Modal -->
+        <div id="modal-container" class="modal-container"></div>
+        <div id="modal-overlay" class="modal-overlay"></div>
+    </div>
+
+    <script>
+        document.getElementById("modal-container").innerHTML = 
+        `
+        <div class="modal">
+            <div class="title">
+                <h3>Erro ao adicionar nova tarefa!</h3>
+            </div>
+            <div class="message">
+                <p>Não é possível adicionar uma nova terefa sem a descrição!</p>
+            </div>
+            <div class="button">
+                <button>Ok<button>
+            </div>
+        </div>
+        `;
+
+        let taskCount = 0;
+        closeModal();
+
+        function addTask(){
+            taskCount = document.getElementsByClassName("new-item").length;
+            
+            const newTask = document.getElementById("newTask");
+
+            if(newTask.value != ""){
+                const toDoList = document.getElementById("to-do-list");
+                const newItem = document.createElement("div");
+
+                newItem.innerHTML = 
+                `
+                <div id="${`item-${taskCount}`}" class="new-item">
+                    <div class="text">
+                        <input id="${`text-${taskCount}`}" type="text" value="${newTask.value}">
+                    </div>
+                    <div class="button">
+                        <button id="${`check-${taskCount}`}" class="ck-button" onclick="checkTask(this.id)">CK</button>
+                    </div>
+                    <div class="button">
+                        <button id="${`remove-${taskCount}`}" class="del-button" onclick="removeTask(this.id)">DEL</button>
+                    </div>
+                </div>
+                `
+                ;
+                newTask.value = "";
+                toDoList.appendChild(newItem);
+            }else{
+                openModal();
+            }
+        }
+
+        function checkTask(id){
+            const idNumber = id.substring(id.indexOf("-") + 1);
+            const taskField = document.getElementById(`text-${idNumber}`);
+            const buttonCheck = document.getElementById(`check-${idNumber}`);
+            const buttonRemove = document.getElementById(`remove-${idNumber}`);
+
+            if(taskField.style.textDecoration === "line-through"){
+                taskField.style.textDecoration = "none";
+                taskField.style.backgroundColor = "white";
+                taskField.style.opacity = "1";
+
+                buttonCheck.style.opacity = "1";
+                buttonRemove.style.opacity = "1";
+            }else{
+                taskField.style.textDecoration = "line-through";
+                taskField.style.backgroundColor = "gray";
+                taskField.style.opacity = "0.5";
+
+                buttonCheck.style.opacity = "0.5";
+                buttonRemove.style.opacity = "0.5";
+            }
+        }
+
+        function removeTask(id){
+            const idNumber = id.substring(id.indexOf("-") + 1);
+            const itemToRemove = document.getElementById(`item-${idNumber}`);
+
+            itemToRemove.parentNode.removeChild(itemToRemove);
+        }
+
+        function openModal(){
+            document.getElementById("modal-container").style.display = "flex";
+            document.getElementById("modal-overlay").style.display = "flex";
+            document.getElementById("modal-container").style.opacity = "1";
+            document.getElementById("modal-overlay").style.opacity = "1";
+        }
+
+        function closeModal(){
+            document.getElementById("modal-container").style.display = "none";
+            document.getElementById("modal-overlay").style.display = "none";
+            document.getElementById("modal-container").style.opacity = "0";
+            document.getElementById("modal-overlay").style.opacity = "0";
+        }
+    </script>
+</body>
+</html>

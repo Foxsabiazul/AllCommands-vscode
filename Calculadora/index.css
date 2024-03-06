@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+    min-width: 600px;
+    background: url("https://mrwallpaper.com/images/hd/albert-einstein-writing-math-equation-g4qvo05lx8naaisa.jpg");
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+}
+
+.calculator{
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px gray;
+    background-color: rgba(255, 255, 255, 0.582);
+    width: 680px;
+    transition: width 1s;
+    backdrop-filter: blur(10px);
+}
+
+.calculator .buttons-standard{
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    justify-items: center;
+    opacity: 1;
+}
+
+.calculator .buttons-sci{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 120px 120px 120px 120px;
+    background-color: orange;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+    justify-items: center;
+    box-shadow: 0px 5px 10px gray;
+}
+
+.calculator .buttons-sci button{
+    color: #514e4c;
+}
+
+.calculator .button,
+.calculator .button-simbol{
+    padding: 10px;
+}
+
+.calculator .button button,
+.calculator .button-simbol button{
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px gray;
+    text-align: center;
+}
+
+.calculator .button-simbol button{
+    color: orange;
+}
+
+.calculator .button button:hover{
+    background-color: gray;
+    transition: 0.3s;
+}
+
+.calculator .button-simbol button:hover{
+    background-color: orange;
+    color: white;
+    transition: 0.3s;
+}
+
+.calculator input{
+    width: 100%;
+    height: 80px;
+    font-size: 36px;
+    border: none;
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: transparent;
+}
+
+@media (max-height: 900px){
+    .calculator{
+        min-height: 700px;
+    }
+
+    .calculator .button button,
+    .calculator .button-simbol button{
+        width: 100px;
+        height: 85px;
+    }
+
+    .calculator .buttons-sci{
+        grid-template-rows: 105px 105px 105px 105px;
+    }
+}
+
+@media (max-height: 820px){
+    .calculator{
+        min-height: 500px;
+    }
+
+    .calculator .button button,
+    .calculator .button-simbol button{
+        width: 100px;
+        height: 45px;
+    }
+
+    .calculator .buttons-sci{
+        grid-template-rows: 65px 65px 65px 65px;
+    }
+}
+
+@media (max-height: 620px){
+    .calculator{
+        min-height: 400px;
+    }
+
+    .calculator .button button,
+    .calculator .button-simbol button{
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .calculator .buttons-sci{
+        grid-template-rows: 50px 50px 50px 50px;
+    }
+}
+
+@media (max-width: 1500px){
+    .container{
+        justify-content: left;
+        padding: 0px 50px;
+    }
+}
+
