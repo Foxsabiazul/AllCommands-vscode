@@ -1,0 +1,52 @@
+body {
+    font-family: Luminari, fantasy Courier New, Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:0;
+    background-image:url(istockphoto-1127603021-170667a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.contanier {
+    text-align: center;
+    margin-top: 50px;
+}
+
+label {
+    font-size:1.2em;
+    margin: 10px;
+    display: flexbox;
+
+}
+
+input {
+    font-size: 2em;
+    padding: 7px;
+    color: #000000;
+    border-radius: 10px;
+    border-color: #00ffd5;
+}
+
+button {
+    background-color: #00fff2;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 0.3em;
+    cursor: pointer;
+    border-color: #0400ff33;
+    
+}
+
+#tabuada {
+    margin-top: 20px;
+    font-size: 1.2em;
+    justify-content: center;
+    margin-bottom: none;
+    margin-left: 50px;
+}
+
