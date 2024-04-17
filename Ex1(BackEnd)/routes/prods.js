@@ -7,7 +7,6 @@ router.get("/", getProduto);
 router.get("/",getUpdateProduto);
 router.get("/", getAddProduto);
 router.get("/", getDeleteProduto);
-
 router.get("/", getProduto);
 
 
